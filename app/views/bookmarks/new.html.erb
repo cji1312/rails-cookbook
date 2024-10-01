@@ -1,0 +1,6 @@
+<h1>Add recipe to </h1> <%= @category.name %>
+<%= simple_form_for [@category, @bookmark] %> do |f|%>
+  <%= f.input :comment %>
+  <%= f.association :recipe %>
+  <%= f.submit %>
+<%= end %>
