@@ -73,3 +73,5 @@ gem "simple_form"
 gem "sassc-rails"
 
 gem "font-awesome-sass", "~> 6.1"
+
+gem "dotenv-rails"
