@@ -1,5 +1,5 @@
-<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1727018742095-14c9a05aa71a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
-  <div>
+<div class="banner" style="background-image: url('<%= cl_image_path @category.photo.key, height: 300, width: 400, crop: :fill if @category.photo.attached? %>')">
+  <div class="category-title">
     <h1><%= @category.name %></h1>
   </div>
 </div>
@@ -34,11 +34,11 @@
 
         <div class="card-trip-infos">
 
-          <div>
+          <div class="comment">
             <i class="fas fa-quote-left me-2"></i><%= bookmark.comment %>
           </div>
 
-          <div>
+          <div class="rating">
             <%= bookmark.recipe.rating %> <%= '⭐️' * bookmark.recipe.rating %>
           </div>
 
